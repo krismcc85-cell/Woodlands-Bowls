@@ -1,7 +1,12 @@
-# Woodlands Indoor Bowls Reserve League
+# Woodlands Bowling Club – Reserve League Manager
 
-Source backup of the existing privately hosted app. Cloudflare migration is in preparation; this is not yet a standalone deployment.
+A standalone static website for team selection, fixtures, rink results, player statistics and WhatsApp announcement posters.
 
-The app includes fixtures, results, points per triple, player position stats, editable reserves, team selection, and the WhatsApp poster.
+## Running
+Open `index.html` in a browser. No build tools or server are required.
 
-Before deploying in a separate account, replace the Sites-specific build/auth configuration, create a separate D1 test database, apply the two schema migrations, and protect the app and API with sign-in. Saved production data is not included in these source files.
+## GitHub Pages
+Upload `index.html` to the root of your repository. Under **Settings → Pages**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, then Save.
+
+## Important
+This is a new first version, not a recovery of the original ChatGPT site. Data is saved in the current browser using localStorage. It does **not** sync between devices. Use the Backup tab to export a JSON backup regularly. To restore it, use the Restore Backup control.
