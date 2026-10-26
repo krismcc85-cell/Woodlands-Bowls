@@ -285,7 +285,7 @@ const save=document.getElementById('saveTeams'),oldSave=save.onclick;save.onclic
 const previousStats=renderStats;renderStats=function(){previousStats();renderPerformance()};
 window.refreshWoodlandsExtras=()=>{renderHome();renderChecks();renderPerformance()};
 document.getElementById('sharePoster').onclick=async()=>{const button=document.getElementById('sharePoster');button.disabled=true;try{if(typeof html2canvas!=='function')throw Error('Image export is unavailable');const canvas=await html2canvas(document.querySelector('#announcement .post'),{backgroundColor:'#fff',scale:2,useCORS:true});const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw Error('Unable to create poster');const file=new File([blob],'woodlands-team.png',{type:'image/png'});if(navigator.canShare?.({files:[file]}))await navigator.share({files:[file],title:'Woodlands Reserve Team'});else{const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=file.name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);alert('Poster downloaded. You can attach it in WhatsApp.')}}catch(e){if(e.name!=='AbortError')alert('Sharing failed: '+e.message)}finally{button.disabled=false}};
-renderHolidays();renderHome();renderChecks();renderPerformance();
+renderHome();renderChecks();renderPerformance();
 })();
 </script><script id="woodlands-cloud-sync">
 (function(){
