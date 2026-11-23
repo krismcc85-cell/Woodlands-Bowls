@@ -291,7 +291,7 @@ renderHome();renderChecks();renderPerformance();
 (function(){
 const status=document.getElementById('cloudStatus'),login=document.getElementById('cloudLoginButton'),logout=document.getElementById('cloudLogoutButton'),upload=document.getElementById('cloudUploadButton');
 if(!window.firebase){status.textContent='Cloud unavailable: Firebase libraries could not load';return}
-const config={apiKey:"AIzaSyBHgTdwygNVS7x6au1O10JPkjck-_86zV4",authDomain:"woodlands-reserve-team.firebaseapp.com",projectId:"woodlands-reserve-team",storageBucket:"woodlands-reserve-team.firebasestorage.app",messagingSenderId:"69051334481",appId:"1:69051334481:web:26e51c2917a59b8f1e5d70"};
+const config={apiKey:"AIzaSyAvNpviHADKHakUf2B14QQO9VcHSVGwRMU",authDomain:"woodlands-reserve-league.firebaseapp.com",projectId:"woodlands-reserve-league",storageBucket:"woodlands-reserve-league.firebasestorage.app",messagingSenderId:"250123404723",appId:"1:250123404723:web:d932d968ac1915e1e277c6",measurementId:"G-4951KGWSRT"};
 firebase.initializeApp(config);const auth=firebase.auth(),db=firebase.firestore();let ref=null,unsub=null,ready=false,applying=false,timer=null,lastSent='';
 const backupRef=db.collection('woodlands').doc('reserve-team').collection('backups');
 const backupStatus=document.getElementById('cloudBackupStatus'),backupRows=document.getElementById('cloudBackupRows');
